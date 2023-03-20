@@ -7,12 +7,12 @@ body {
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     background: #111d4a;
     color: #fff;
     display: grid;
-    grid-template: 200px auto auto 150px/ 1em auto auto 1em;
+    grid-template: 200px auto auto 150px 1em/ 1em auto auto 1em;
     gap: 1em 0;
 }
 
@@ -69,4 +69,24 @@ body {
     font-weight: 700;
     display: block;
     font-size: 1.25em;
+}
+@media (min-width: 600px){
+    .card {
+        grid-template: 1em 50px auto auto 1em/200px auto auto 1em;
+        gap: 1em 2em;
+    }
+    .card-img {
+        grid-row: 1 / -1;
+        grid-column: 1;
+    }
+    .card-title{
+        grid-row: 2;
+    }
+    .card-body{
+        grid-row: 3;
+    }
+    .card-read-time,
+    .card-btn{
+        grid-row: 4;
+    }
 }
